@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotels Thái Nguyên</title>
+
+    <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/carousel/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- ggfont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet"> -->
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            width: 100%;
+            padding-bottom: 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        /* GLOBAL STYLES
+  --------------------------------------------- */
+        
+        html {
+            height: 100%;
+            font-family: 'Raleway', sans-serif;
+        }
+        /* Padding below the footer and lighter body text */
+        
+        body {
+            /* padding-top: 3rem; */
+            /* padding-bottom: 3rem; */
+            color: #5a5a5a;
+            height: 100%;
+            font-family: 'Raleway', sans-serif;
+            /* color: rgb(10, 10, 10); */
+        }
+        
+        .bg-trongsuot {
+            background-color: rgba(0, 0, 0, 0.61);
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        
+        .navbar-brand {
+            font-family: 'Major Mono Display', monospace;
+            font-family: 'Sedgwick Ave', cursive;
+        }
+        /* CUSTOMIZE THE CAROUSEL
+  -------------------------------------------- */
+        
+        main {
+            height: 100%;
+        }
+        
+        #myCarousel {
+            height: 30%;
+        }
+        /* Carousel base class */
+        
+        .carousel {
+            margin-bottom: 4rem;
+        }
+        /* Since positioning the image, we need to help out the caption */
+        
+        .carousel-caption {
+            bottom: 4rem;
+            z-index: 10;
+            /* background-color: rgba(0, 0, 0, 0.349); */
+        }
+        
+        .carousel-caption h1 {
+            font-weight: 700;
+        }
+        /* Declare heights because of positioning of img element */
+        
+        .carousel-inner {
+            height: 100%;
+        }
+        
+        .carousel-item {
+            /* height: 32rem; */
+            height: 100%;
+        }
+        
+        .carousel-item>img {
+            /* position: absolute; */
+            /* top: 0; */
+            /* left: 0; */
+            min-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+        
+        .nutxem {
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .nutxem:hover {
+            background-color: rgba(255, 255, 255, 0.651);
+            border-color: rgba(255, 255, 255, 0.651);
+            ;
+        }
+        /* MARKETING CONTENT
+-------------------------------------------------- */
+        /* Center align the text within the three columns below the carousel */
+        
+        .tieudegiua * {
+            margin-bottom: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        .tieudegiua {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tieudegiua h2 {
+            font-weight: 700;
+        }
+        
+        u {
+            position: relative;
+            z-index: 99;
+            text-decoration: none;
+            text-decoration-line: none;
+        }
+        
+        u:after {
+            background-color: #f76570;
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 5px;
+            left: 0;
+            bottom: 7px;
+            z-index: -9;
+        }
+        
+        .marketing .col-lg-4 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .marketing h2 {
+            font-weight: 700;
+        }
+        
+        .marketing .col-lg-4 p {
+            margin-right: .75rem;
+            margin-left: .75rem;
+        }
+        
+        .anhtron {
+            max-width: 60%;
+            max-height: 60%;
+        }
+        
+        .anhvuong {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .vien {
+            border: 1px solid #f1f1f1;
+        }
+        
+        .btn-secondary {
+            background-color: #f76570;
+            border-radius: 30px;
+            border-color: #f76570;
+        }
+        /* Featurettes
+------------------------- */
+        
+        .featurette-divider {
+            margin: 5rem 0;
+            /* Space out the Bootstrap <hr> more */
+        }
+        /* Thin out the marketing headings */
+        
+        .featurette-heading {
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -.05rem;
+        }
+        /* Footer
+-------------------------------------------------- */
+        
+        .right-arrow {
+            width: 10px;
+        }
+        
+        .footer {
+            background-color: rgb(255, 255, 255);
+            font-weight: 500;
+        }
+        
+        .footer h6 {
+            font-weight: 700;
+        }
+        
+        footer .navbar-brand {
+            color: #f76570;
+        }
+        /* RESPONSIVE CSS
+-------------------------------------------------- */
+        
+        @media (min-width: 40em) {
+            /* Bump up size of carousel content */
+            .carousel-caption p {
+                margin-bottom: 1.25rem;
+                font-size: 1.25rem;
+                line-height: 1.4;
+            }
+            .featurette-heading {
+                font-size: 50px;
+            }
+        }
+        
+        @media (min-width: 62em) {
+            .featurette-heading {
+                margin-top: 7rem;
+            }
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .navbar {
+                background-color: rgb(5, 8, 49);
+                text-align: center;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark menutop bg-trongsuot">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Thái Nguyên Travel</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                <div class=" collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto mb-2 mb-md-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="vactions.html">Vacations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="travelGuides.html">Travel Guides</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="hotels.html">Hotels</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./image/hotelsbanner.jpg" alt="">
+
+                    <div class="container">
+                        <div class="carousel-caption text-left">
+                            <h1>Hotels Ranking</h1>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Marketing messaging and featurettes
+  ================================================== -->
+            <div class="container tieudegiua">
+                <div class="row">
+                    <p>Hotels
+                        <p>
+                            <h2><u>RANKING</u></h2>
+                </div>
+            </div>
+            <div class="container marketing">
+                <div class="row">
+                    <div class="col-lg-4 vien">
+                        <img class="bd-placeholder-img  " src="./image/hotels1.jpg" alt="hotels">
+                        <h2>Falling Rainfall</h2>
+                        <p>All our Deluxe rooms have big windows to help you take a broad view of the cityscape and nature. We offer bigger bed and every bathroom has bathtub and shower, which brings relaxation to you after a long day.
+                        </p>
+                        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    </div>
+                    <div class="col-lg-4 vien">
+                        <img class="bd-placeholder-img  " src="./image/hotels2.jpg" alt="hotels">
+                        <h2>Tan Cuong tea hills</h2>
+                        <p>Fast WIFI connection, satelite TV and international standard electric socket are standard throughout Hotel. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    </div>
+                    <div class="col-lg-4 vien">
+                        <img class="bd-placeholder-img  " src="./image/hotels3.jpg" alt="hotels">
+                        <h2>Nui Coc Lake</h2>
+                        <p>Coc Nui Lake is located in Thai Nguyen province and is a large, stretching, artificial lake. Endowed with a charming young beauty from nature. And dubbed “Ha Long Bay” miniature of Thai Nguyen. Moreover, it is also associated with
+                            the legend of Chang Coc, her Cong. This is a tourist destination that attracts many tourists to choose for their holidays, entertainment places during the day.</p>
+                        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    </div>
+                </div>
+
+                <!-- FOOTER -->
+                <footer class="container">
+                    <div class="row footer">
+                        <div class="col-md-6">
+                            <a class="navbar-brand" href="index.html">Thái Nguyên Travel</a>
+                            <p>Since a laid-back vacation usually appeals to leisure travelers only, it really makes sense for seasoned travelers to push their travel limits by going to a far-flung destination and uncover its hidden treasures. Acclaimed
+                                as a pristine jewel, Thai Nguyen Province is a lesser-known tourist destination in Northern Vietnam, covered by lush greenery and dozens of historical significance.</p>
+                        </div>
+                        <div class="col-md-3 ">
+                            <h6>OUR AGENCY</h6>
+                            <p> <img class="right-arrow" src="./image/right-arrow.png"> Services
+                            </p>
+                            <p> <img class="right-arrow" src="./image/right-arrow.png">Insurancee</p>
+                            <p><img class="right-arrow" src="./image/right-arrow.png">Agency</p>
+                            <p><img class="right-arrow" src="./image/right-arrow.png">Tourism</p>
+                            <p><img class="right-arrow" src="./image/right-arrow.png">Payment</p>
+
+                        </div>
+                        <div class="col-md-3">
+                            <h6>PARTNERS</h6>
+                            <p><img class="right-arrow" src="./image/right-arrow.png">Booking</p>
+                            <p><img class="right-arrow" src="./image/right-arrow.png">RentalCar</p>
+                            <p><img class="right-arrow" src="./image/right-arrow.png">Hotels</p>
+                            <p><img class="right-arrow" src="./image/right-arrow.png">TripAdvisor</p>
+                        </div>
+
+                    </div>
+                    <p class="float-right "><a class="btn btn-secondary" href="#">Back to top</a></p>
+                    <p>&copy; 2017-2020 Company, Inc. &middot; <a class="btn btn-secondary" href="#">Privacy</a> &middot; <a class="btn btn-secondary" href="#">Terms</a></p>
+                </footer>
+    </main>
+
+
+
+</body>
